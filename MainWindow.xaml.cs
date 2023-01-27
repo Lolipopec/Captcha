@@ -49,8 +49,16 @@ namespace Captcha
         }
         private void RefButton_Click(object sender, RoutedEventArgs e)
         {
-            CreateImg();
-
+            //CreateImg();
+            ModalWindow modalWindow = new ModalWindow("Пароль");
+            if (modalWindow.ShowDialog()==true)
+            {
+                MessageBox.Show("ТРУ");
+            }
+            else
+            {
+                MessageBox.Show("Не ТРУ");
+            }
         }
 
         private void CheckButton_Click(object sender, RoutedEventArgs e)
